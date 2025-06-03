@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        body {
+            background-color: #f6f6f6;
+            position: relative;
+            height: 100vh;
+
+        }
+
+        .box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        .card {
+            border-radius: 4px;
+            padding: 40px 50px 40px 50px;
+            /* background-color: white; */
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease;
+        }
+
+        a {
+            color: white;
+            margin-top: 30px;
+            /* font-weight: bold; */
+
+        }
+
+        a {
+            background-color: #00aeec;
+            border-radius: 4px;
+            padding: 10px 10px;
+            transition: background-color 0.5s ease;
+
+        }
+
+        a:hover {
+            background-color: #41a5c9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="card">
+            <h1 style="margin-bottom: 20px; font-weight: bold;">Anime website</h1>
+            <p style="color: gray; font-size:13px ; white-space: nowrap;" >网址收集</p>
+            <a href="https://yhdmapps.com/">
+                樱花动漫</a>
+            <a href="https://ani.gamer.com.tw/"> <img
+                    src="https://ts2.tc.mm.bing.net/th/id/ODLS.52fbb1f8-52b4-4218-94d5-649b80e56271?w=32&h=32&qlt=90&pcl=fffffc&o=6&pid=1.2"
+                    width="25px">巴哈姆特動畫瘋</a>
+            <a href="#" id="colo">哔哩哔哩</a>
+
+        </div>
+
+
+    </div>
+    <script>
+        let ispink = true;
+
+        function toggleColor() {
+
+            document.querySelectorAll('a').forEach(el => {
+                el.style.backgroundColor = ispink ? 'white' : 'black';
+                el.style.color = ispink ? 'black' : 'white';
+            });
+            document.querySelectorAll('.card').forEach(el => {
+                el.style.backgroundColor = ispink ? 'black' : 'white';
+                el.style.color = ispink ? 'black' : 'white';
+
+            });
+            //  document.querySelectorAll('h1').forEach(el => {
+            //     el.innerHTML = ispink ? 'Anime website' : '动漫网址';
+
+            // });
+            document.querySelectorAll('p').forEach(el => {
+                el.innerHTML = ispink ? '一键跳转！！！' : '网站收集';
+
+            });
+            document.querySelectorAll('h1').forEach(el => {
+                el.style.color = ispink ? 'white' : 'black';
+
+            });
+            // document.querySelectorAll('a').forEach(el => {
+            //     el.style.backgroundColor = ispink ? 'white' : 'black';
+            //     el.style.color = ispink ? 'black' : 'white';
+
+
+            // });
+            ispink = !ispink;
+
+            setTimeout(toggleColor, 10000);
+        }
+
+        toggleColor();  // 启动
+    </script>
+</body>
+
+</html>

@@ -37,7 +37,7 @@ function toggleText() {
 
 
 const bgImg = new Image();
-bgImg.src = '/image/MIKU (12).png'; // 确保路径正确
+bgImg.src = '/image/MIKU(12).png'; // 确保路径正确
 bgImg.onload = function () {
     document.body.classList.add('bg-loaded');
 };

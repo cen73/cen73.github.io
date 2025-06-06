@@ -27,11 +27,19 @@ function toggleColor() {
 
     ispink = !ispink;
 
-    setTimeout(toggleColor, 10000);
+    setTimeout(toggleColor, 2000);
 }
 
 toggleColor();  // 启动
 function toggleText() {
     document.getElementById('a1').innerText = "动漫网址";
 }
+
+
+const bgImg = new Image();
+bgImg.src = '/image/MIKU\ \ \(12\).png'; // 确保路径正确
+bgImg.onload = function () {
+    document.body.classList.add('bg-loaded');
+};
+
 
